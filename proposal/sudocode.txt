@@ -1,0 +1,60 @@
+setup(){
+	set pins for input and output
+}
+
+HEX(in){
+	set value of hex based on input;
+}
+
+buzzer(1 or 2 or 3){
+	buzz buzz;
+}
+
+GenerateInput(){
+	randomly pick input
+	buzzer();
+	return RequiredInput
+}
+
+flexIn(){
+	return 0 or 1;
+}
+
+sonarIn(){
+	return 0 or 1;
+}
+
+tiltIn(){
+	return 0 or 1;
+}
+
+time(){
+	return time;
+}
+
+loop(){
+	while(check for input to start game){
+		HEX(reset display to 00);
+		
+		while(success of task = 1){
+			GenerateInput();
+			HEX(value)
+			success of task = 0;
+			while(time passed is less than time alloted){
+				if(Requiredinput == flex && flexIn() == 1) success = 1;
+				if(Requiredinput == sonar && sonarIn() == 1) success = 1;
+				if(Requiredinput == tilt && tiltIn() == 1) success = 1;
+			}
+			time();
+			increase value for hex;
+		}
+		
+		HEX(off);
+		delay()
+		HEX(on);
+		delay()
+		HEX(off):
+		delay()
+		HEX(on);
+	}
+}
